@@ -19,8 +19,10 @@ $(document).ready(function() {
 function drawCanvas() {
     var c = document.getElementById("myCanvas");
     var ctx = c.getContext("2d");
+    ctx.fillStyle="#000000";
+    ctx.fillRect(0,0,530,360);
     var img = document.getElementById("scream");
-    ctx.drawImage(img,10,10);
+    ctx.drawImage(img,30,20,470,250);
     getDataUrl();
 }
 
