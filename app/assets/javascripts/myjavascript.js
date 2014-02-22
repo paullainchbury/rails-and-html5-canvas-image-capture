@@ -9,8 +9,11 @@ $(document).ready(function() {
   // });
 
   $('#go_create_image').click(function() {
-    console.log("user clicked");
     drawCanvas();
+  });
+
+  $('#draw_the_main_text').click(function() {
+    drawMainText();
   });
 
 
@@ -23,6 +26,16 @@ function drawCanvas() {
     ctx.fillRect(0,0,530,360);
     var img = document.getElementById("scream");
     ctx.drawImage(img,30,20,470,250);
+}
+
+function drawMainText() {
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.font = "30px Arial";
+    ctx.fillStyle = 'white';
+    ctx.textAlign = 'center';
+    var x = c.width / 2;
+    ctx.fillText($('#enter_main_text').val(),x,310);
     getDataUrl();
 }
 
