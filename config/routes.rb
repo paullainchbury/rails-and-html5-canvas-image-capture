@@ -1,4 +1,8 @@
 Cheerupdev::Application.routes.draw do
+  resources :cherups
+  root :to => "cherups#index"
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

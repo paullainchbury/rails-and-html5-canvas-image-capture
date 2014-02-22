@@ -1,0 +1,25 @@
+<h1>Listing cherups</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>Img</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @cherups.each do |cherup| %>
+  <tr>
+    <td><%= cherup.content %></td>
+    <td><%= cherup.img %></td>
+    <td><%= link_to 'Show', cherup %></td>
+    <td><%= link_to 'Edit', edit_cherup_path(cherup) %></td>
+    <td><%= link_to 'Destroy', cherup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Cherup', new_cherup_path %>
